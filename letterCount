@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main {
+
+    public static void main (String[]args){
+        String sentence = "Nanas bacim gulum nanay kime kalmis bu dunya";
+        System.out.println("The letter count is: " + countLetters(sentence));
+        }
+        public static int countLetters(String sentence){
+        int letterCount = 0;
+
+        for(int i=0; i<sentence.length();i++){
+            char c = sentence.charAt(i);
+
+            if (Character.isLetter(c)){
+                letterCount++;
+            }
+        }
+        return letterCount;
+        }
+    }
+
+
+
+

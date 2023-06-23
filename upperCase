@@ -1,0 +1,27 @@
+import java.util.*;
+
+class Main {
+
+    public static void main(String[] args) {
+        String letters = "a, C, B, z, K, f, G";
+
+        int upperCasesCount = 0;
+        ArrayList<String> upperLetters = new ArrayList<>();
+
+        for(int i = 0; i<letters.length(); i++){
+            char c = letters.charAt(i);
+
+            if(Character.isUpperCase(c)){
+                upperCasesCount++;
+                upperLetters.add(Character.toString(c));
+
+            }
+        }
+
+        System.out.println("Lower case letters: " + upperLetters);
+        System.out.println("Lower case letter count: " + upperCasesCount);
+
+
+
+    }
+}

@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Main {
+
+    public static void main(String[] args) {
+        String letters = "a, C, B, z, K, f, G";
+
+        int lowerCasesCount = 0;
+
+
+        ArrayList<String> lowerCases = new ArrayList<>();
+
+        for(int i = 0; i<letters.length(); i++){
+            char c = letters.charAt(i);
+
+            if(Character.isLowerCase(c)){
+                lowerCasesCount++;
+                lowerCases.add(Character.toString(c));
+
+            }
+        }
+
+        System.out.println("Lower case letters: " + lowerCases);
+        System.out.println("Lower case letter count: " + lowerCasesCount);
+
+
+
+    }
+}

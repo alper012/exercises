@@ -27,3 +27,37 @@ class Main {
         }
     }
 
+
+//another version
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+    public static void main(String[] args) {
+        int[] array1 = {1, 4, 56, 75, 89, 234};
+        int[] array2 = {3, 8, 24, 75, 6, 234};
+
+        System.out.println(findCommonElements(array1, array2));
+
+    }
+
+    public static Set<Integer> findCommonElements(int[] array1, int[] array2) {
+        Set<Integer> commonElements = new HashSet<>();
+
+        for (int num1 : array1) {
+            for (int num2 : array2) {
+                if (num1 == num2) {
+                    commonElements.add(num1);
+                    break;
+                }
+            }
+        }
+        return commonElements;
+
+    }
+}
+
+
+

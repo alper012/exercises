@@ -1,0 +1,18 @@
+class Main {
+    public static void main(String[] args) {
+        int number = 10;
+        calculateFactorial(number);
+        System.out.println(calculateFactorial(number));
+
+    }
+
+    public static long calculateFactorial(int n){
+        if (n==0){
+            return 1;
+        } else {
+            return n * calculateFactorial(n -1);
+        }
+    }
+
+
+}

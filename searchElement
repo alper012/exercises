@@ -1,6 +1,8 @@
 import java.util.HashSet;
 import java.util.Set;
 
+//int version
+
 class Main {
     public static void main(String[] args) {
 
@@ -25,4 +27,70 @@ class Main {
         return false;
     }
 }
+
+//string version
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+    public static void main(String[] args) {
+
+        String[] letters = {"a", "b", "c", "d", "e"};
+        char target = 'c';
+
+        if(searchElement(letters, target)){
+            System.out.println(target + " is found in the array.");
+        } else{
+            System.out.println(target + " is not found in the array.");
+
+        }
+
+    }
+
+    public static boolean searchElement(String[] letters, char target){
+        for(int i = 0; i< letters.length; i++){
+            if(letters[i].charAt(0)==target){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+//string version 2
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+    public static void main(String[] args) {
+
+        String letters = "Hello World!";
+        char target = 'o';
+
+
+        if(searchElement(letters, target)){
+            System.out.println(target + " is found in the array.");
+        } else{
+            System.out.println(target + " is not found in the array.");
+
+        }
+
+    }
+
+    public static boolean searchElement(String letters, char target){
+        for(int i = 0; i< letters.length(); i++){
+            char c = letters.charAt(i);
+            if(c==target){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+
+
 

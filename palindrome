@@ -31,11 +31,9 @@ public class Main {
         String str = "madam";
         String reverseStr = new StringBuilder(str).reverse().toString();
 
-        if(str.equals(reverseStr)){
-            System.out.println("Yes!");
-        } else {
-            System.out.println("No.");
-        }
+        String result = str.equals(reverseStr) ? "Yes!" : "No.";
+        System.out.println(result);
     }
 }
+
 

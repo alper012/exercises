@@ -23,3 +23,19 @@ public class Main {
 
 
 }
+
+//another version
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "madam";
+        String reverseStr = new StringBuilder(str).reverse().toString();
+
+        if(str.equals(reverseStr)){
+            System.out.println("Yes!");
+        } else {
+            System.out.println("No.");
+        }
+    }
+}
+

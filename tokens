@@ -4,17 +4,20 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-//input: "He is a very very good boy, isn't he?"
-        String s = scan.nextLine();
-         String[] tokens = s.split("[ !,?._'@]+");
-
-        System.out.println(tokens.length);
-
-        for(String token : tokens){
-            System.out.println(token);
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String s1 = s.trim();
+        String[] arr = s1.split("[ !,?._'@]+");
+        
+        if(s1.isEmpty()) {
+            System.out.println(0);
+        } else {
+            System.out.println(arr.length);
         }
-        scan.close();
+        
+        for(String a : arr) {
+            System.out.println(a);
+        }
+        sc.close();
     }
 }
-

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the test case: ");
+        int testCases = Integer.parseInt(scan.nextLine());
+
+        while(testCases>0){
+            System.out.println("Enter the pattern: ");
+            String pattern = scan.nextLine();
+
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid.");
+            } catch (PatternSyntaxException e){
+                System.out.println("Invalid.");
+            }
+            testCases--;
+        }
+        scan.close();
+
+
+    }
+}

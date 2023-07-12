@@ -18,8 +18,8 @@ class Main {
             }
         }
 
-        System.out.println("Lower case letters: " + upperLetters);
-        System.out.println("Lower case letter count: " + upperCasesCount);
+        System.out.println("Upper case letters: " + upperLetters);
+        System.out.println("Upper case letter count: " + upperCasesCount);
 
 
 

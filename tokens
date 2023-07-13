@@ -6,7 +6,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String s1 = s.trim();
+        s = s.trim();
         String[] arr = s1.split("[ !,?._'@]+");
         
         if(s1.isEmpty()) {

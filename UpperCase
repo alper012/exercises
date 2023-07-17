@@ -1,18 +1,37 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
-class Main {
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Say something");
+        String a = scan.nextLine();
 
-    public static void main (String[]args){
-        String sentence = "WelCoMe To jAVa";
-        
-        for(int i=0; i<sentence.length();i++){
-            char c = sentence.charAt(i);
+        ArrayList<Character> uppercaseChars = new ArrayList<>();
+        int index = 0;
+
+
+        for(int i = 0; i<a.length(); i++){
+            char c = a.charAt(i);
             if(Character.isUpperCase(c)){
-                System.out.println(c);
+              uppercaseChars.add(c);
+
             }
+
         }
-        }
+        System.out.println(uppercaseChars);
+
     }
+
+
+
+
+    }
+
+
+
+
+
 
 
 

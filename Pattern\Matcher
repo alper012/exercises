@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String regex = "\\b(\\w+)(\\b\\W+\\b\\1\\b)*";
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        Scanner scan = new Scanner(System.in);
+        int numSentences = Integer.parseInt(scan.nextLine());
+
+        while(numSentences>0){
+            String sentence = scan.nextLine();
+            Matcher match = p.matcher(sentence);
+
+            while(match.find()){
+                sentence = sentence.replaceAll(match.group(), match.group(1));
+
+            }
+            System.out.println(sentence);
+            numSentences--;
+        }
+        scan.close();
+
+    }
+}

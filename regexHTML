@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int testcase = Integer.parseInt(scan.nextLine());
+
+        while(testcase-- >0){
+            String line = scan.nextLine();
+
+            if(line.length()> 1000){
+                System.out.println("Invalid input");
+                continue;
+            }
+
+            Pattern pattern = Pattern.compile("<(\\p{Print}+)>([^<>]+)</\\1");
+            Matcher matcher = pattern.matcher(line);
+
+            boolean found = false;
+
+            while(matcher.find()){
+                System.out.println(matcher.group(2));
+                found = true;
+            }
+
+            if(!found){
+                System.out.println("None");
+            }
+        }
+
+    }
+}
+

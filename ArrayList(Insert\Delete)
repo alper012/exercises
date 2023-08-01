@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the initial number of elements: ");
+        int n = sc.nextInt();
+
+        ArrayList<Integer> mylist = new ArrayList<Integer>();
+
+        System.out.println("Enter " + n + " integers: ");
+        for (int i = 0; i < n; i++) {
+            int j = sc.nextInt();
+            mylist.add(j);
+        }
+
+        System.out.println("Enter the number of queries: ");
+        int numOfQ = sc.nextInt();
+
+        while (numOfQ > n) {
+            System.out.println("Invalid number of queries. Number of queries must be less than or equal to the initial number of elements.");
+            System.out.println("Enter the number of queries: ");
+            numOfQ = sc.nextInt();
+        }
+
+        for (int i = 0; i < numOfQ; i++) {
+            System.out.println("'Insert' or 'Delete': ");
+            String choice = sc.next();
+
+            if (choice.contains("Insert")) {
+                System.out.println("Enter an index number: ");
+                int index = sc.nextInt();
+                System.out.println("Enter a value: ");
+                int value = sc.nextInt();
+                mylist.add(index, value);
+            } else if (choice.contains("Delete")) {
+                System.out.println("Enter an integer to be deleted: ");
+                int j = sc.nextInt();
+                mylist.remove(j);
+            } else {
+                System.out.println("Invalid query type. Please enter 'Insert' or 'Delete'.");
+
+            }
+        }
+
+        for (int x : mylist) {
+            System.out.print(x + " ");
+        }
+    }
+}
